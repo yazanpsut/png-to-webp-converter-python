@@ -10,15 +10,31 @@ if __name__ == '__main__':
         dir_of_pngs = input()
     print('Enter compression rate (0-100):')
     compression = input()
+    try:
+        compression = int(compression)
+    except ValueError:
+        pass
     while type(compression) != int or compression < 0 or compression > 100:
         print('Please inter an integer from 0 to 100')
         compression = input()
+        try:
+            compression = int(compression)
+        except ValueError:
+            pass
     print('Enter size controller in kb (if image in path less than this size'
           ' it will keep the compression at 100, and 0 to ignore this option):')
     size_ctrl = input()
+    try:
+        size_ctrl = int(size_ctrl)
+    except ValueError:
+        pass
     while type(size_ctrl) != int or size_ctrl < 0:
         print('Please enter integer size 0 or above for the size controller:')
         size_ctrl = input()
+        try:
+            size_ctrl = int(size_ctrl)
+        except ValueError:
+            pass
 
     paths = Path(dir_of_pngs).glob("**/*.png")
 
