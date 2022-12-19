@@ -3,6 +3,9 @@ from PIL import Image
 import os
 
 if __name__ == '__main__':
+    print("\033[95m##########          Welcome          ##########\033[0m")
+    print("\033[94m##########   Png to Webp Converter   ##########\033[0m")
+    print("\033[91m##########   Auther: Yazan Alhorani  ##########\033[0m")
     print('Enter directory of pngs to be converted to webp')
     dir_of_pngs = input()
     while not os.path.exists(dir_of_pngs):
